@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta charset="UTF-8">
+    <title>化工板块生产计划整体优化系统</title>
+    <link type="text/css" rel="stylesheet" href="css/index.css" />
+</head>
+<body class="disable-default-action">
+    <div class="maindiv">
+        <div class="title_tip">
+
+        </div>
+        <div id="login">
+            <!--<div id="login2_up"><img src="img/login_ico.png" /></div>-->
+            <div id="login2_down">
+                <!--<span>中国石化安全生产管理信息系统</span>-->
+            </div>
+            <div id="login3">
+                <div id="title_hide"></div>
+                <div><input type="text" id="txtName" name="username" placeholder="用户名" autofocus required /></div>
+                <div><input type="password" id="txtPwd" name="password" placeholder="密码" required /></div>
+                <div><img src="img/btnlogin.png" class="btnlogin_img" id="btnlogin" /></div>
+                <div style="margin-top:-20px;"><label id="_lable" style="font-size: 14px;color: #ff0000;font-weight: bold;"></label></div>
+                <input type="hidden" id="getValue" />
+            </div>
+        </div>
+        <div id="ngv" class="ngvpanel">
+            <!--<iframe id="mainframe" name="mainframe" src="html/navhome.html" frameborder="0" scrolling="no"></iframe>-->
+        </div>
+    </div>
+    <div id="showpage" style="display: none;  height: 637px;">
+
+    </div>
+</body>
+</html>
+<script src="lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#btnlogin").bind("click", function (ev) {
+            if ($('#txtName').val().trim() == "")
+            {
+                $("#_lable").text("用户名不能为空！");
+                $('#txtName').focus();
+               // return;
+            } else if ($('#txtPwd').val().trim() == "") {
+                $("#_lable").text("密码不能为空！");
+                $('#txtPwd').focus();
+              //  return;
+            }
+            $("#getValue").val($('#txtName').val().trim());
+            var param = {
+                userName: $('#txtName').val().trim(),
+                password: $('#txtPwd').val().trim()
+            };
+            $(".maindiv").css("display","none");
+            $("#showpage").css("display","block");
+
+            var typeitem=null;
+            if($("#getValue").val()=="admin"){
+                typeitem=1;
+                $("#showpage").html('<iframe id="mainframe" name="mainframe" src="HES_ general_index.html?username=' + $("#getValue").val() + '&type='+typeitem+'" frameborder="0" scrolling="no"></iframe>');
+            }else{
+                typeitem=2
+                $("#showpage").html('<iframe id="mainframe" name="mainframe" src="HES_ company_index.html?username=' + $("#getValue").val() + '&type='+typeitem+'" frameborder="0" scrolling="no"></iframe>');
+            }
+
+
+//            $.fn.serviceInvoke(serviceAddress.Address2, "Login", param, function (result) {
+//                if (result==1) {
+//                   $("#login").hide();
+//                   $("#ngv").html('<iframe id="mainframe" name="mainframe" src="html/navhome.html?username=' + $("#getValue").val() + '" frameborder="0" scrolling="no"></iframe>');
+//                   $('title').text('化工板块生产计划整体优化系统');
+//                } else {
+//					$("#_lable").text("账号或密码不正确！");
+//                }
+//            });
+        })
+    });
+</script>

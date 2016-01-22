@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../lib/jquery-1.7.2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../lib/easyui/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/easyui/themes/icon.css" />
+    <script type="text/javascript" src="../lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery.easyui.min.js"></script>
+    <script src="../lib/easyui/locale/easyui-lang-zh_CN.js"></script>
+
+    <style>
+        .divtop{
+            width: 853px;
+            height: 35px;
+            border: 1px solid #e4e4e4;
+            background-color: #0193E8;
+            margin: auto;
+        }
+        .divtop ul li{
+            list-style: none;
+            line-height: 2;
+            float: left;
+            margin-top: -15px;
+            margin-left: -25px;
+            font-family: 微软雅黑;
+            color: #f9f9f9;
+        }
+        .divleft{
+            width: 420px;
+            height: 500px;
+            border: 1px solid #e4e4e4;
+            background-color: #f9f9f9;
+            float: left;
+        }
+        .divheard{
+            width: 70px;
+            height: 30px;
+            border: 1px solid #e7e7e7;
+            margin-left: 10px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #03C700;
+            line-height: 2;
+            color: #f9f9f9;
+            font-family: 微软雅黑;
+            float: left;
+        }
+        .divright{
+            width: 420px;
+            height: 500px;
+            border: 1px solid #e4e4e4;
+            background-color: #f9f9f9;
+            float: left;
+            margin-left: 10px;
+        }
+        .divheardright{
+            width: 70px;
+            height: 30px;
+            border: 1px solid #e7e7e7;
+            margin-left: 10px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #03C700;
+            line-height: 2;
+            color: #f9f9f9;
+            font-family: 微软雅黑;
+            float: left;
+        }
+        .divlable{
+            /* border: 1px solid; */
+            font-size: 12px;
+            line-height: 5;
+            margin-left: 20px;
+            font-family: 微软雅黑;
+        }
+        .divselect{
+            width: 80px;
+            font-size: 10px;
+            font-family: 微软雅黑;
+        }
+        .divbtn{
+            background-color: #0A99EC;
+            border: 1px solid #0A99EC;
+            border-radius: 4px;
+            width: 50px;
+            cursor: pointer;
+        }
+        .divbtn1{
+            width: 80px;
+            height: 20px;
+            background-color: #0A99EC;
+            border: 1px solid #0A99EC;
+            border-radius: 4px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="divtop">
+    <ul>
+        <li>
+            权限对照
+        </li>
+    </ul>
+</div>
+<div style="margin: auto;width: 854px">
+<div class="divleft">
+    <div style="width: 100%;height: 50px">
+        <div class="divheard">
+            HSE
+        </div>
+    </div>
+    <div>
+        <ul class="easyui-tree" style="margin-left: 20px;margin-top: 20px">
+            <li data-options="state:'closed'">
+                <span>HSE一级</span>
+                <ul>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li data-options="state:'closed'">
+                <span>HSE二级</span>
+                <ul>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li data-options="state:'closed'">
+                <span>HSE三级</span>
+                <ul>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="divright">
+    <div style="width: 100%;height: 50px">
+        <div class="divheardright">
+            燕山石化
+        </div>
+        <label class="divlable">系统名称：</label>
+        <select class="divselect">
+            <option>请选择</option>
+        </select>
+        <input type="button" value="确定" class="divbtn">
+        <input type="button" value="清楚关联" class="divbtn1">
+    </div>
+    <div>
+        <ul class="easyui-tree" style="margin-left: 20px;margin-top: 20px">
+            <li data-options="state:'closed'">
+                <span>HSE一级</span>
+                <ul>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li data-options="state:'closed'">
+                <span>HSE二级</span>
+                <ul>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li data-options="state:'closed'">
+                <span>HSE三级</span>
+                <ul>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-options="state:'closed'">
+                        <span>二级HSE</span>
+                        <ul>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                            <li>
+                                <span>三级HSE</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

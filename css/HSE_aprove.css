@@ -1,0 +1,52 @@
+html,div,body{
+    font-family: 微软雅黑;
+    font-size: 13px;
+}
+.main_box{
+    min-width: 1000px;
+    margin: auto;
+}
+#tab1 td {
+    border: solid #C1C1C1;
+    border-width: 0px 1px 1px 0px;
+    padding: 10px;
+    text-align: center;
+}
+
+#tab1 {
+    width: 100%;
+    border: solid #C1C1C1;
+    border-width: 1px 0px 0px 1px;
+    font-size: 12px;
+}
+.title_box{
+    height: 35px;
+    background-color: #4bacd3;
+    width: auto;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    line-height: 2.5;
+}
+.btn_box{
+    height: 40px;
+    width: auto;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    line-height: 2.5;
+}
+.pastcheck{
+    width: 55px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    font-family: 微软雅黑;
+}
+.commbtnstyle{
+    cursor: pointer; width: 55px;border-radius: 3px;background-color: #4bacd3;padding: 3px;color: aliceblue;margin-right: 3px; margin-bottom: 3px;
+}
+.synchro_configure{
+    cursor: pointer; width: 55px;border-radius: 3px;background-color: #4bacd3;padding: 3px;color: aliceblue; margin-bottom: 3px;
+}
+#config{
+    border:1px solid #dedede;border-radius:5px; -webkit-box-shadow: 10px 10px 15px #909090; padding:0px 0px 0px 0px; position:absolute; background-color: #028cd7;
+}

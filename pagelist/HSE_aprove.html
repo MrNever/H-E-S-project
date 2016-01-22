@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../css/HSE_aprove.css" rel="stylesheet" type="text/css"/>
+    <script>
+        var cover = mydiv = null;
+        var config=null;
+        window.onload = function () {
+            cover = document.getElementById('coverdiv');
+            cover.style.width = Math.max(parent.document.documentElement.scrollWidth, parent.document.documentElement.clientWidth) + "px";
+            cover.style.height = Math.max(parent.document.documentElement.scrollHeight, parent.document.documentElement.clientHeight) + "px"
+            cover.style.display = "none";
+
+            mydiv = document.getElementById('mydiv');
+            with (mydiv) {
+                style.width = "400px";
+                style.height = "240px";
+              //  style.left = (document.body.clientWidth-$("#mydiv").width())/2;
+              //  style.top = "20px";
+                style.display = "none";
+            }
+            config = document.getElementById('config');
+            with (config) {
+                style.width = "150px";
+                style.height = "100px";
+                //  style.left = (document.body.clientWidth-$("#mydiv").width())/2;
+                //  style.top = "20px";
+                style.display = "none";
+            }
+        };
+    </script>
+    <script src="../lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="../js/HSE_aprove.js" type="text/javascript"></script>
+    <script src="../data/aprove.js" type="text/javascript"></script>
+</head>
+<body>
+   <div class="main_box">
+       <div style="color:#ffffff;height: 30px;width: 100%;background-color: #0193e9;margin-bottom: 5px;line-height: 2.5;">
+           <p style="margin-left: 5px;">接口审批</p>
+       </div>
+       <div>
+           <table id="tab1" cellpadding='0' cellspacing='0' >
+
+           </table>
+       </div>
+   </div>
+   <div id='coverdiv' style="filter:alpha(opacity=10);Opacity:0.5; background-color:#feeeed; position:absolute; left:0px; top:0px;"></div>
+   <div id='mydiv' style="border:1px solid #dedede;border-radius:5px; -webkit-box-shadow: 10px 10px 15px #909090; padding:0px 0px 0px 0px; position:absolute; background-color:#ffffff;">
+       <div class="title_box">
+           <div style=" padding-left: 10px; display: -webkit-box;-webkit-box-flex: 1;color: #ffffff;">审批</div>
+           <div style=" padding-right: 10px;color: #ffffff;font-weight: bold;cursor: pointer;" onclick="document.getElementById('mydiv').style.display =document.getElementById('coverdiv').style.display='none';">X</div>
+       </div>
+       <div style="margin: 10px;margin-bottom:5px;font-family: 微软雅黑">
+           审批意见
+       </div>
+       <div style="">
+           <textarea style="  width: 90%;height: 100px;margin-left: 10px;;"></textarea>
+       </div>
+       <div style="float: right;margin-right: 22px;margin-top: 10px;">
+           <button id="past" class="pastcheck">通过</button>
+           <button id="nopast" class="pastcheck">不通过</button>
+       </div>
+
+   </div>
+
+   <div id="config">
+      <div style=" height: 35px;color:#ffffff;border-bottom: 1px solid #ffffff;display: -webkit-box;-webkit-box-orient: horizontal;  line-height: 2.5;">
+          <div>是否进行接口配置</div>
+          <div style="margin-left: 25px;cursor: pointer;" onclick="document.getElementById('config').style.display = document.getElementById('coverdiv').style.display='none';">X</div>
+      </div>
+      <div style="display: -webkit-box;-webkit-box-orient: horizontal;">
+          <button id="yes" style="cursor: pointer;margin-left: 9px;" class="pastcheck">是</button>
+          <button id="no" style="cursor: pointer;margin-top: 20px;margin-left: 20px;" class="pastcheck">否</button>
+      </div>
+   </div>
+</body>
+</html>
