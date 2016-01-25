@@ -59,10 +59,10 @@
             var typeitem=null;
             if($("#getValue").val()=="admin"){
                 typeitem=1;
-                $("#showpage").html('<iframe id="mainframe" name="mainframe" src="HES_ general_index.html?username=' + $("#getValue").val() + '&type='+typeitem+'" frameborder="0" scrolling="no"></iframe>');
+                $("#showpage").html('<iframe id="mainframe" name="mainframe" src="pagelist/HES__index.html?username=' + $("#getValue").val() + '&type='+typeitem+'" frameborder="0" scrolling="no"></iframe>');
             }else{
                 typeitem=2
-                $("#showpage").html('<iframe id="mainframe" name="mainframe" src="HES_ company_index.html?username=' + $("#getValue").val() + '&type='+typeitem+'" frameborder="0" scrolling="no"></iframe>');
+                $("#showpage").html('<iframe id="mainframe" name="mainframe" src="pagelist/HES__index.html?username=' + $("#getValue").val() + '&type='+typeitem+'" frameborder="0" scrolling="no"></iframe>');
             }
 
 
